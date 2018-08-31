@@ -29,6 +29,10 @@ class CreateFormateursTable extends Migration
             $table->string('mail', 45)->nullable();
             $table->string('adresse', 45)->nullable();
             $table->string('telephone', 45)->nullable();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+
+
         });
     }
 

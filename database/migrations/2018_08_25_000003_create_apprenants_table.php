@@ -33,7 +33,8 @@ class CreateApprenantsTable extends Migration
 
         });
 
-        Schema::table('apprenants', function ($table) {
+        if (Schema::hasTable($this->set_schema_table)) return;
+        Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->index(["formateurs_id"], 'fk_apprenants_formateurs_idx');
             $table->foreign('formateurs_id', 'fk_apprenants_formateurs_idx')
                 ->references('id')->on('formateurs')

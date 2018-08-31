@@ -62,8 +62,6 @@
 
     <div class="links">
         <a href="/formateur">Formateurs</a>
-        <a href="/apprenant">Apprenants</a>
-        <a href="/certif">Certif</a>
     </div>
 </div>
 @endsection
