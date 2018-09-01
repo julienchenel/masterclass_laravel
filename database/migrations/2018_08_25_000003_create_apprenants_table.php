@@ -29,18 +29,16 @@ class CreateApprenantsTable extends Migration
             $table->string('mail', 45)->nullable();
             $table->string('adresse', 45)->nullable();
             $table->string('telephone', 45)->nullable();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
             $table->integer('formateurs_id');
-
-        });
-
-        if (Schema::hasTable($this->set_schema_table)) return;
-        Schema::create($this->set_schema_table, function (Blueprint $table) {
-            $table->index(["formateurs_id"], 'fk_apprenants_formateurs_idx');
             $table->foreign('formateurs_id', 'fk_apprenants_formateurs_idx')
-                ->references('id')->on('formateurs')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+            ->references('id')->on('formateurs')
+            ->onDelete('no action')
+            ->onUpdate('no action');
+
         });
+
     }
 
     /**
