@@ -24,7 +24,7 @@ class CreateApprenantsTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('name', 45)->nullable();
+            $table->string('nom', 45)->nullable();
             $table->string('prenom', 45)->nullable();
             $table->string('mail', 45)->nullable();
             $table->string('adresse', 45)->nullable();
