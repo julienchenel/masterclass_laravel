@@ -19,6 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/formateur', function () {
-    return view('formateur');
-});
+//Créer ici la route vers la vue "formateurs";
