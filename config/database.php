@@ -66,6 +66,14 @@ return [
             'schema' => 'public',
             'sslmode' => 'prefer',
         ],
+        
+        'mongodb' => [
+            'driver'   => 'mongodb',
+            'host'     => env('DB_HOST', 'localhost'),
+            'port'     => env('MONGO_DB_PORT', ''),
+            'database' => env('MONGO_DATABASE', ''),
+        ],
+
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
